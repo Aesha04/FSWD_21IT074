@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 9</title>
+</head>
+<body>
+    <script>
+        function asyncOperation(callback) {
+            setTimeout(function() {
+              
+              let result = "asyncOperation completed";
+           
+              callback(result);
+            }, 5000); 
+          }
+        
+        function handleResult(result) {
+            console.log("Result:", result);
+        }
+          
+        console.log("Start");
+        asyncOperation(handleResult);
+        console.log("End");
+         
+    </script>
+</body>
+</html>
